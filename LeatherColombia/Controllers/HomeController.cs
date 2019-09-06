@@ -49,6 +49,26 @@ namespace LeatherColombia.Controllers
         {
             return View();
         }
+        public IActionResult CueroTerminado()
+        {
+            return View();
+        }
+        public IActionResult CueroTerminado1()
+        {
+            return View();
+        }
+        public IActionResult CueroAuto()
+        {
+            return View();
+        }
+        public IActionResult CueroCalzado()
+        {
+            return View();
+        }
+        public IActionResult CueroMarroquineria()
+        {
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

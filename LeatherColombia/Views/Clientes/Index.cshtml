@@ -5,7 +5,14 @@
 }
 
 <h2>Index</h2>
-
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 <p>
     <a asp-action="Create">Create New</a>
 </p>
@@ -37,35 +44,36 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pais.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ciudad.CiudadID)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Apellido)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Telefono)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Estado)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ClienteID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ClienteID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ClienteID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pais.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ciudad.CiudadID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Estado)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ClienteID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ClienteID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ClienteID">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

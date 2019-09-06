@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+
+<configuration>
+  <system.web>
+	  <compilation debug="true" targetFramework="4.5" />
+	  <httpRuntime targetFramework="4.5" />
+	   </system.web>
+	  <appSettings>
+    <add key="ValidationSettings:UnobtrusiveValidationMode" value="Server=(localdb)\\mssqllocaldb;Database=LeatherColombia;Trusted_Connection=True;MultipleActiveResultSets=true" />
+    <!--<add key="connectionString" value="workstation id=DBCurtiembre.mssql.somee.com;packet size=4096;user id=ADSI1618618_SQLLogin_1;pwd=7usx21a79l;datasource=DBCurtiembre.mssql.somee.com;persistsecurity info=False;initial catalog=DBCurtiembre" />-->
+  </appSettings>
+ 
+</configuration>

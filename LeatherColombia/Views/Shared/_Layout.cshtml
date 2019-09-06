@@ -9,6 +9,7 @@
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
+        
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
@@ -27,7 +28,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">LeatherColombia</a>
+                <a asp-area="Active" asp-controller="Home" asp-action="Index" class="navbar-brand">LeatherColombia</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -35,26 +36,54 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="CueroAzul">Cuero en Azul</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="CueroPelo">Cuero en Pelo</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="CueroCrosta">Cuero en Crosta</a></li>
+                    @*@<li>
+
+            <div class="btn-group">
+                <button type="button" asp-controller="Home" asp-action="CueroTerminado" class="btn btn-default">Cuero Terminado</button>
+
+                <button type="button" class="btn btn-default dropdown-toggle"
+                        data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Desplegar menú</span>
+                </button>
+
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Acción #1</a></li>
+                    <li><a href="#">Acción #2</a></li>
+                    <li><a href="#">Acción #3</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Acción #4</a></li>
+                </ul>
+            </div>
+        </li>*@
+
+
 
                     <li>
+
+                        @*<button type="button" class="btn btn-default dropdown-toggle"
+                                data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">Desplegar menú</span>
+                        </button>*@
                         <a asp-area="" class="" aria-labelledby="" asp-controller="Home" asp-action="CueroTerminado">Cuero Terminado</a>
-
-                        <a class="dropdown-item" href="">Cuero para Autos</a>
-                        <a class="dropdown-item" href="">Cuero para Calzado</a>
-                        <a class="dropdown-item" href="">Cuero para Marroquineria</a>
-
+                        <ul class="dropdown-toggle">
+                            <li><a class="dropdown-item" asp-controller="Home" asp-action="CueroAuto">Cuero para Autos</a></li>
+                            <li><a class="dropdown-item" asp-controller="Home" asp-action="CueroCalzado">Cuero para Calzado</a></li>
+                            <li><a class="dropdown-item" asp-controller="Home" asp-action="CueroMarroquineria">Cuero para Marroquineria</a></li>
+                        </ul>
                     </li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Ecologicos">Ecologicos</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contactenos">Contactenos</a></li>
 
 
-                    @*<li><a asp-area="" asp-controller="Clientes" asp-action="">Clientes</a></li>
-        <li><a asp-area="" asp-controller="Ciudades" asp-action="">Ciudad</a></li>
+                    <li><a asp-area="" asp-controller="Clientes" asp-action="">Clientes</a></li>
+                    <li><a asp-area="" asp-controller="Ciudades" asp-action="">Ciudad</a></li>
         <li><a asp-area="" asp-controller="DetallePedidos" asp-action="">Detalle Pedido</a></li>
         <li><a asp-area="" asp-controller="MetodoPagos" asp-action="">Formas de Pago</a></li>
         <li><a asp-area="" asp-controller="Pais" asp-action="">Paises</a></li>
         <li><a asp-area="" asp-controller="Pedidos" asp-action="">Pedidos</a></li>
-        <li><a asp-area="" asp-controller="Productos" asp-action="">Productos</a></li>*@
+                    <li><a asp-area="" asp-controller="Productos" asp-action="">Productos</a></li>
                 </ul>
                 <partial name="_LoginPartial" />
             </div>
@@ -74,6 +103,9 @@
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/contact_me.js"></script>
+        <script src="~/js/jqBootstrapValidation.js"></script>
+
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
     <environment exclude="Development">

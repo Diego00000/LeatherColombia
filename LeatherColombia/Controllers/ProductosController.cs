@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -54,8 +55,12 @@ namespace LeatherColombia.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProductoID,NombreProducto,Precio")] Producto producto)
+        public async Task<IActionResult> Create([Bind("ProductoID,NombreProducto,Precio,Imagen")] Producto producto)
         {
+            
+            
+
+            
             if (ModelState.IsValid)
             {
                 _context.Add(producto);
@@ -86,7 +91,7 @@ namespace LeatherColombia.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ProductoID,NombreProducto,Precio")] Producto producto)
+        public async Task<IActionResult> Edit(int id, [Bind("ProductoID,NombreProducto,Precio,Imagen")] Producto producto)
         {
             if (id != producto.ProductoID)
             {

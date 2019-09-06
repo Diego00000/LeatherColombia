@@ -7,12 +7,16 @@ using System.Threading.Tasks;
 namespace LeatherColombia.Models
 {
     public class Producto
-    {
-        public int ProductoID { get; set; }
-        [Required]
-        public string NombreProducto { get; set; }
-        [Required]
-        public decimal Precio { get; set; }
+    {    
+            public int ProductoID { get; set; }
+            [Required]
+            public string NombreProducto { get; set; }
+            [Required]
+            public decimal Precio { get; set; }
+            public string Imagen { get; set; }
 
+        }
     }
-}
+
+
+
